@@ -57,12 +57,15 @@ def entry_peage() -> 'html':
 @app.route('/viewlog')
 def view_the_log() -> 'html':
     contents = []
+
     with open('vsearch.log', 'r') as file:
         for line in file:
             contents.append([])
             for item in line.split('|'):
                 contents[-1].append(escape(item))
+
     titles = ['Dane z formularza', 'Adres klienta', 'Agent użytkowanika', 'Wyniki']
+
     return render_template('viewlog.html',
                            the_title='Widok logu',
                            the_row_titles=titles,
