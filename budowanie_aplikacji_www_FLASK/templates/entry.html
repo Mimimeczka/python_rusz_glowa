@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+<form method="post" action="/search">
+    <table>
+        <p> Użyj tego formularza aby określić paramerty wyszukiwania:</p>
+        <tr><td>Faza:</td><td><input name='phrase' type='TEXT' width='60'></td></tr>
+        <tr><td>Litery:</td><td><input name='letters' type='TEXT' value='aeiouy'></td></tr>
+    </table>
+    <p>Gdy bedziesz gotów kliknij ten przycisk</p>
+    <p><input value="Zrób to!" type="submit"></p>
+</form>
+{% endblock %}
