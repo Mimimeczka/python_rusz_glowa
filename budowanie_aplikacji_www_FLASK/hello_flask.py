@@ -51,7 +51,7 @@ def search() -> 'html':
 @app.route('/') # dekorator route łączy urla z funkcją
 @app.route("/entry")
 def entry_peage() -> 'html':
-    return render_template('entry.html', the_title='Witamy na naszej stronie SEARCH')
+    return render_template('entry.html', the_title='Witamy na naszej stronie search')
 
 
 @app.route('/viewlog')
